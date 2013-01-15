@@ -99,13 +99,14 @@ http {
     #  # }
     #}
 
-    location ~ .*\.php$ {
-      try_files $uri =404;
-      limit_conn phplimit 5; # limit to 5 concurrent users to PHP per IP.
-      include         /app/vendor/nginx/conf/fastcgi_params;
-      fastcgi_param   HTTPS on; # force SSL
-      fastcgi_pass    php_fpm;
-      fastcgi_param   SCRIPT_FILENAME $document_root$fastcgi_script_name;
-    }
+    #
+    #location ~ .*\.php$ {
+    #  try_files $uri =404;
+    #  limit_conn phplimit 5; # limit to 5 concurrent users to PHP per IP.
+    #  include         /app/vendor/nginx/conf/fastcgi_params;
+    #  fastcgi_param   HTTPS on; # force SSL
+    #  fastcgi_pass    php_fpm;
+    # fastcgi_param   SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    #}
   }
 }
