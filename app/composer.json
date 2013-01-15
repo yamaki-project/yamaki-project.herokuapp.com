@@ -1,0 +1,6 @@
+{
+  "require": {
+    "yamaki-project/yamaki": "*"
+  },
+  "minimum-stability": "dev"
+}
