@@ -68,6 +68,7 @@ http {
       stub_status on;
       access_log   off;
     }
+
     location / {
         if (-f $request_filename) {
             break;
